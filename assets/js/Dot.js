@@ -60,6 +60,22 @@ Dot.DrawAll = function()
 
 
 
+Dot.Length = function()
+{
+	return Dot.List.length
+};//eof
+
+
+Dot.LastOne = function()
+{
+	if(Dot.Length()>0)
+		return Dot.List[Dot.Length()-1];
+	
+	return false;
+}
+
+
+
 
 Dot.prototype.draw = function()
 {

@@ -2,6 +2,6 @@
 - src: "assets/js/Keyboard.js"
 - src: "assets/js/Point2d.js"
 - src: "assets/js/Vars.js"
-- src: "assets/js/Connection.js"
 - src: "assets/js/Dot.js"
+- src: "assets/js/Poly.js"
 - src: "assets/js/Main.js"

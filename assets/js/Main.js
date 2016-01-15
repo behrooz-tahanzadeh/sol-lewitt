@@ -1,6 +1,6 @@
 Main = 
 {
-	intervalTime:10,
+	intervalTime:100,
 	intervalID:-1,
 	
 	
@@ -85,8 +85,8 @@ Main =
 		ctx.fillStyle = "rgba(255,255,255,"+this.BgOpacity+")";
 		ctx.fillRect(0, 0, Vars.PageW, Vars.PageH);
 		
+		Poly.DrawAll();
 		Dot.DrawAll();
-		//Connection.DrawAll();
 	},
 	
 	
@@ -134,6 +134,11 @@ Main =
 		if(e.ctrlKey) return;
 		
 		new Dot(e.pageX, e.pageY);
+		
+		if(Dot.Length()>2)
+			for(i=0; i<Dot.Length()-2; ++i)
+				if(Math.random()>0.7)
+					new Poly([Dot.LastOne(), Dot.List[i], Dot.List[i+1]]);
 	},
 };//eo Main{}
 
